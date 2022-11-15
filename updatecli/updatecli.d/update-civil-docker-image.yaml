@@ -46,4 +46,4 @@ pullrequests:
       automerge: false
       draft: false
       description: |
-        Bump jenkins-packer version to {{ source "latestCivilServiceImage" }}
+        Bump civil-service version to {{ source "latestCivilServiceImage" }}
