@@ -22,7 +22,8 @@ sources:
       image: "hmctspublic.azurecr.io/civil/service"
       versionFilter:
         kind: regex
-        pattern: ""^prod-[a-f0-9]+-(?P<ts>[0-9]+)"
+        pattern: ""^prod-[a-f0-9]+-(?P<ts>[0-9]+)"\
+        strict: true
 
 targets:
   setAzureGalleryImageVersion:
