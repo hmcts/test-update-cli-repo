@@ -25,7 +25,7 @@ sources:
         pattern: "^prod-[a-f0-9]+-(?P<ts>[0-9]+)"
 
 targets:
-  setAzureGalleryImageVersion:
+  setLatestCivilServiceImage:
     sourceid: latestCivilServiceImage
     name: Bump civil service Image Version
     kind: file
@@ -34,10 +34,10 @@ targets:
       files:
         - charts/civil-ccd/values.template.yaml
       matchpattern: 'image: hmctspublic.azurecr.io/civil/service:prod-[a-f0-9]+-(?P<ts>[0-9]+)'
-      content: 'image: hmctspublic.azurecr.io/civil/service:"{{ source `latestCivilServiceImage` }}"'
+      content: 'image: hmctspublic.azurecr.io/civil/service:{{ source `latestCivilServiceImage` }}'
 
 pullrequests:
-  setAzureGalleryImageVersion:
+  setLatestCivilServiceImage:
     kind: github
     scmid: default
     title: >-
@@ -46,4 +46,4 @@ pullrequests:
       automerge: false
       draft: false
       description: |
-        Bump jenkins-packer version to {{ source "latestCivilServiceImage" }}
+        Bump civil-service version to {{ source "latestCivilServiceImage" }}
