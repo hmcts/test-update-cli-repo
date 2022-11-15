@@ -33,8 +33,8 @@ targets:
     spec:
       files:
         - charts/civil-ccd/values.template.yaml
-      matchpattern: 'image: hmctspublic.azurecr.io/civil/service:*'
-      content: 'image: hmctspublic.azurecr.io/civil/service: "{{ source `latestCivilServiceImage` }}"'
+      matchpattern: 'image: hmctspublic.azurecr.io/civil/service:prod-[a-f0-9]+-(?P<ts>[0-9]+)'
+      content: 'image: hmctspublic.azurecr.io/civil/service:"{{ source `latestCivilServiceImage` }}"'
 
 pullrequests:
   setAzureGalleryImageVersion:
