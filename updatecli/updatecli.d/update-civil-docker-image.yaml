@@ -20,7 +20,7 @@ sources:
     kind: dockerImage
     spec:
       image: "hmctspublic.azurecr.io/civil/service"
-      versionfilter:
+      versionFilter:
         kind: regex
         pattern: ""^prod-[a-f0-9]+-(?P<ts>[0-9]+)"
 
