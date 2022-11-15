@@ -3,4 +3,4 @@ github:
   user: "hmcts-dependency-updater"
   branch: "master"
   owner: "hmcts"
-  repository: "civil-ccd-definition"
+  repository: "test-update-cli-repo"
