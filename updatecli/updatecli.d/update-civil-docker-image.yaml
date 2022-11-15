@@ -25,7 +25,7 @@ sources:
         pattern: "^prod-[a-f0-9]+-(?P<ts>[0-9]+)"
 
 targets:
-  setAzureGalleryImageVersion:
+  setLatestCivilServiceImage:
     sourceid: latestCivilServiceImage
     name: Bump civil service Image Version
     kind: file
@@ -37,7 +37,7 @@ targets:
       content: 'image: hmctspublic.azurecr.io/civil/service:{{ source `latestCivilServiceImage` }}'
 
 pullrequests:
-  setAzureGalleryImageVersion:
+  setLatestCivilServiceImage:
     kind: github
     scmid: default
     title: >-
