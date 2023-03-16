@@ -74,7 +74,7 @@ civil-service:
   java:
     imagePullPolicy: Always
     ingressHost: ${SERVICE_FQDN}
-    image: hmctspublic.azurecr.io/civil/service:prod-fc7d299-20230223104612
+    image: hmctspublic.azurecr.io/civil/service:prod-fe02cb5-20230315151351
     keyVaults:
       civil:
         resourceGroup: civil
